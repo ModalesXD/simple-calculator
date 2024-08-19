@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Panel de resultados */
+#result {
+    display: block;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    font-size: 2em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/* Contenedor de botones */
+#buttons {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos para los botones */
+#buttons button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Hover para los botones */
+#buttons button:hover {
+    background-color: #555;
+}
+
+/* Botón igual */
+#equal {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Botón igual hover */
+#equal:hover {
+    background-color: #0056b3;
+}
+
+/* Botón C (Clear) */
+#c {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Botón C hover */
+#c:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos específicos para diferentes tamaños de pantalla */
+@media (min-width: 768px) {
+    /* Estilos para pantallas grandes (PC) */
+    #buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #result {
+        font-size: 2.5em;
+    }
+
+    #buttons button {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Estilos para pantallas pequeñas (teléfonos) */
+    #buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Botón igual y Clear ocupan una fila completa en teléfonos */
+    #equal {
+        grid-column: span 3;
+    }
+
+    #c {
+        grid-column: span 3;
+    }
+
+    #result {
+        font-size: 2em;
+    }
+
+    #buttons button {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+}
